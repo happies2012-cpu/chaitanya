@@ -35,18 +35,18 @@ export const DashboardSidebar = () => {
 
     return (
         <aside className="w-64 border-r border-white/5 bg-[#020617] hidden lg:flex flex-col fixed inset-y-0 z-50">
-            <div className="p-6">
-                <div className="flex items-center gap-3 mb-10 group">
-                    <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
-                        <span className="text-white font-black text-xl">H</span>
+            <div className="p-8 pb-4">
+                <div className="flex items-center gap-3 mb-12 group cursor-pointer">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-orange-500/30 group-hover:rotate-12 transition-transform duration-500">
+                        <span className="text-white font-black text-2xl">H</span>
                     </div>
                     <div className="flex flex-col -space-y-1">
-                        <span className="text-sm font-black text-white uppercase tracking-tighter">HORIZON<span className="text-orange-500">EB-1</span></span>
-                        <span className="text-[8px] font-black text-muted-foreground tracking-widest uppercase">Tech Advisors</span>
+                        <span className="text-sm font-black text-white uppercase tracking-tighter transition-colors group-hover:text-orange-500">HORIZON<span className="text-orange-500 group-hover:text-white">EB-1</span></span>
+                        <span className="text-[10px] font-black text-muted-foreground tracking-[0.2em] uppercase opacity-60">Tech Advisory</span>
                     </div>
                 </div>
 
-                <nav className="space-y-1">
+                <nav className="space-y-2">
                     {sidebarItems.map((item) => {
                         const isActive = pathname === item.href;
                         return (
@@ -54,35 +54,57 @@ export const DashboardSidebar = () => {
                                 key={item.href}
                                 href={item.href}
                                 className={cn(
-                                    "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-all group",
+                                    "flex items-center gap-3 px-5 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest transition-all duration-300 group relative overflow-hidden",
                                     isActive
-                                        ? "bg-orange-600 text-white shadow-lg shadow-orange-500/20"
-                                        : "text-muted-foreground hover:text-white hover:bg-white/5"
+                                        ? "bg-orange-600 text-white shadow-2xl shadow-orange-500/30"
+                                        : "text-muted-foreground hover:text-white hover:bg-orange-600/5"
                                 )}
                             >
-                                <item.icon className={cn("size-5", isActive ? "text-white" : "group-hover:text-orange-500")} />
+                                <item.icon className={cn("size-4 transition-colors", isActive ? "text-white" : "group-hover:text-orange-500")} />
                                 {item.name}
+                                {isActive && (
+                                    <div className="absolute right-0 top-0 bottom-0 w-1 bg-white" />
+                                )}
                             </Link>
                         );
                     })}
                 </nav>
             </div>
 
-            <div className="mt-auto p-6 space-y-4">
-                <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                    <div className="flex items-center gap-2 text-[10px] font-black text-emerald-400 uppercase mb-2">
-                        <Brain size={12} strokeWidth={3} /> AI Models Active
+            <div className="mt-auto p-8 space-y-8">
+                {/* My Lead Advisor Section */}
+                <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/5 space-y-4 shadow-2xl group cursor-pointer hover:bg-white/5 transition-colors">
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl overflow-hidden border border-orange-500/20 group-hover:scale-105 transition-transform">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Advisor" className="w-full h-full object-cover" />
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-[10px] font-black text-white uppercase tracking-tight">Elena Vance</span>
+                            <span className="text-[8px] font-black text-orange-500/80 uppercase tracking-widest leading-none">Senior Advisor</span>
+                        </div>
                     </div>
-                    <div className="text-[10px] text-white/40 font-bold uppercase tracking-wider">
-                        Cloud: Claude 3.5<br />
-                        Local: Llama 3 (Backup)
+                    <div className="flex items-center justify-between text-[8px] font-black text-white/40 uppercase tracking-[0.2em]">
+                        <span>Last Active: Now</span>
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     </div>
                 </div>
 
-                <button className="flex items-center gap-3 px-4 py-3 w-full rounded-xl text-sm font-bold text-muted-foreground hover:text-rose-400 hover:bg-rose-500/5 transition-all">
-                    <LogOut className="size-5" />
-                    Logout
-                </button>
+                <div className="space-y-3">
+                    <div className="p-4 rounded-xl bg-[#020617] border border-white/5">
+                        <div className="flex items-center gap-2 text-[9px] font-black text-white/50 uppercase tracking-widest mb-3">
+                            <Lock size={12} className="text-orange-500" /> USCIS Data Sync
+                        </div>
+                        <div className="flex items-center justify-between text-[10px] font-black text-orange-500 uppercase tracking-widest">
+                            <span>Status: Active</span>
+                            <span>v9.4</span>
+                        </div>
+                    </div>
+
+                    <button className="flex items-center gap-3 px-5 py-4 w-full rounded-2xl text-[11px] font-black uppercase tracking-widest text-muted-foreground hover:text-rose-400 hover:bg-rose-500/5 transition-all">
+                        <LogOut className="size-4" />
+                        End Session
+                    </button>
+                </div>
             </div>
         </aside>
     );
