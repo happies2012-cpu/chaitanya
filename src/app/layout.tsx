@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   keywords: ["EB-1A Visa", "Extraordinary Ability", "US Green Card", "Horizon Eb1", "Immigration Consulting"],
 };
 
+import { PremiumBackground } from "@/components/ui/PremiumBackground";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,7 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${outfit.variable} antialiased font-sans bg-background text-foreground bg-mesh min-h-screen`}>
+      <body className={`${outfit.variable} antialiased font-sans bg-[#020617] text-foreground min-h-screen relative`}>
+        <PremiumBackground />
         {children}
         <Toaster position="top-right" />
       </body>

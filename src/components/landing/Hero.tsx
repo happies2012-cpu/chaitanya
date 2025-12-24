@@ -6,108 +6,121 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Globe } from "lucide-react";
 
+import { useScroll, useTransform } from "framer-motion";
+
 export const Hero = () => {
+    const { scrollY } = useScroll();
+    const bgY = useTransform(scrollY, [0, 800], [0, 300]);
+    const textY = useTransform(scrollY, [0, 800], [0, 100]);
+
     return (
-        <section className="relative pt-32 pb-20 px-6 overflow-hidden min-h-screen flex flex-col justify-center">
+        <section className="relative pt-64 pb-32 px-6 overflow-hidden min-h-screen flex flex-col justify-center bg-transparent">
             {/* Professional Background Imagery - Using the generated luxury banner */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#020617]/80 to-[#020617] z-10" />
+            <motion.div style={{ y: bgY }} className="absolute inset-0 z-0 scale-110">
+                <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-transparent to-[#020617] z-10" />
                 <img
                     src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-                    className="w-full h-full object-cover opacity-20"
+                    className="w-full h-full object-cover opacity-30 brightness-[0.7]"
                     alt="Modern skyscraper architecture"
                 />
-            </div>
+            </motion.div>
 
-            <div className="max-w-7xl mx-auto text-center relative z-10 px-4">
+            <motion.div
+                style={{ y: textY }}
+                className="max-w-7xl mx-auto text-center relative z-10 px-4"
+            >
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="inline-flex items-center gap-3 px-5 py-2 rounded-2xl bg-orange-600/10 border border-orange-500/20 text-orange-400 text-[10px] font-black uppercase tracking-[0.2em] mb-12 shadow-2xl backdrop-blur-md"
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl bg-orange-600/10 border border-orange-500/20 text-orange-400 text-[10px] font-black uppercase tracking-[0.4em] mb-12 shadow-[0_0_30px_rgba(249,115,22,0.1)] backdrop-blur-xl"
                 >
-                    <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-                    Trusted by 75+ Global Tech Leaders in the US
+                    <div className="w-2.5 h-2.5 rounded-full bg-orange-500 animate-pulse shadow-[0_0_10px_rgba(249,115,22,0.8)]" />
+                    75+ Technical Advisory Successes in the US
                 </motion.div>
 
                 <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-6xl md:text-[10rem] font-black tracking-tighter mb-8 leading-[0.85] text-white uppercase"
+                    initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                    className="text-6xl md:text-[11rem] font-black tracking-tighter mb-10 leading-[0.8] text-white uppercase"
                 >
-                    Defining <br /> <span className="text-orange-500">Extraordinary</span> <br /> Success.
+                    Engineering <br /> <span className="text-orange-500 drop-shadow-[0_0_50px_rgba(249,115,22,0.3)]">Extraordinary</span> <br /> Careers.
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-16 leading-relaxed font-black uppercase tracking-tight opacity-80"
+                    transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                    className="text-xl md:text-2xl text-muted-foreground/80 max-w-4xl mx-auto mb-20 leading-relaxed font-black uppercase tracking-tight"
                 >
-                    Strategic Technical Advisory for the EB-1A Green Card. <br className="hidden md:block" />
-                    Engineered for high-impact individuals who shape the future of American innovation.
+                    Strategic Technical Advisory for the EB-1A Merit Path. <br className="hidden md:block" />
+                    Crafted for pioneers who define the next frontier of global innovation.
                 </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                    className="flex flex-col md:flex-row items-center justify-center gap-6"
+                    transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+                    className="flex flex-col md:flex-row items-center justify-center gap-8"
                 >
                     <Link href="/eligibility">
-                        <Button size="lg" className="h-18 px-12 bg-orange-600 hover:bg-orange-700 text-white rounded-2xl text-xl font-black shadow-3xl shadow-orange-500/40 group uppercase tracking-widest border-none transition-all hover:scale-105 active:scale-95">
-                            Run Eligibility Scan
-                            <ArrowRight className="ml-4 group-hover:translate-x-2 transition-transform" />
+                        <Button size="lg" className="h-20 px-14 bg-orange-600 hover:bg-orange-700 text-white rounded-[1.5rem] text-xl font-black shadow-[0_20px_40px_-10px_rgba(249,115,22,0.4)] group uppercase tracking-[0.2em] border-none transition-all hover:scale-105 active:scale-95">
+                            Check My Eligibility
+                            <ArrowRight className="ml-5 group-hover:translate-x-3 transition-transform" strokeWidth={3} />
                         </Button>
                     </Link>
                     <Link href="/about">
-                        <Button size="lg" variant="outline" className="h-18 px-12 border-white/10 hover:bg-white/5 text-xl font-black rounded-2xl backdrop-blur-md text-white uppercase tracking-widest transition-all">
-                            View Expert Network
-                            <Globe className="ml-4 text-orange-500" size={24} />
+                        <Button size="lg" variant="outline" className="h-20 px-14 border-white/10 hover:bg-white/5 text-xl font-black rounded-[1.5rem] backdrop-blur-md text-white uppercase tracking-[0.2em] transition-all hover:border-orange-500/50 group/btn">
+                            Success Network
+                            <Globe className="ml-5 text-orange-500 group-hover/btn:rotate-[30deg] transition-transform" size={28} />
                         </Button>
                     </Link>
                 </motion.div>
 
-                {/* Trust Signals with Luxury Profiles */}
+                {/* Trust Signals with High-Fidelity Profiles */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 1.5, delay: 1 }}
-                    className="mt-32 pt-16 border-t border-white/5"
+                    transition={{ duration: 2, delay: 1 }}
+                    className="mt-40 pt-20 border-t border-white/10"
                 >
-                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
-                        <div className="flex flex-col items-center group">
-                            <span className="text-5xl font-black text-white group-hover:text-orange-500 transition-colors">75+</span>
-                            <span className="text-[10px] text-muted-foreground uppercase tracking-[0.3em] font-black mt-2">Successful Petitions</span>
-                        </div>
-                        <div className="flex flex-col items-center group">
-                            <div className="flex -space-x-3 mb-3">
-                                {[1, 2, 3, 4].map((i) => (
-                                    <div key={i} className="w-10 h-10 rounded-full border-2 border-[#020617] bg-white/10 overflow-hidden shadow-xl">
-                                        <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Success story" className="w-full h-full object-cover" />
+                    <div className="flex flex-wrap justify-center items-start gap-16 md:gap-32">
+                        {[
+                            { label: "Petitions Approved", val: "75+" },
+                            { label: "Community", val: "Elite", hasProfiles: true },
+                            { label: "Success Velocity", val: "100%" },
+                            { label: "Legal Accuracy", val: "Gold", hasShield: true },
+                        ].map((item, i) => (
+                            <motion.div
+                                key={i}
+                                whileHover={{ y: -5 }}
+                                className="flex flex-col items-center group cursor-default"
+                            >
+                                {item.hasProfiles ? (
+                                    <div className="flex -space-x-4 mb-4">
+                                        {[1, 2, 3, 4].map((p) => (
+                                            <motion.div
+                                                key={p}
+                                                whileHover={{ scale: 1.2, zIndex: 10, y: -5 }}
+                                                className="w-12 h-12 rounded-2xl border-2 border-[#020617] bg-[#1a1a1a] overflow-hidden shadow-2xl relative"
+                                            >
+                                                <img src={`https://i.pravatar.cc/150?img=${p + 20}`} alt="Success" className="w-full h-full object-cover" />
+                                            </motion.div>
+                                        ))}
                                     </div>
-                                ))}
-                                <div className="w-10 h-10 rounded-full border-2 border-[#020617] bg-orange-600 flex items-center justify-center text-[10px] font-black text-white shadow-xl">
-                                    +64
-                                </div>
-                            </div>
-                            <span className="text-[10px] text-muted-foreground uppercase tracking-[0.3em] font-black">Trusted Community</span>
-                        </div>
-                        <div className="flex flex-col items-center group">
-                            <span className="text-5xl font-black text-white group-hover:text-orange-500 transition-colors">100%</span>
-                            <span className="text-[10px] text-muted-foreground uppercase tracking-[0.3em] font-black mt-2">Success Velocity</span>
-                        </div>
-                        <div className="flex flex-col items-center group">
-                            <div className="flex items-center gap-3">
-                                <Shield className="text-orange-500" size={32} />
-                                <span className="text-3xl font-black text-white uppercase tracking-tighter">Gold Standard</span>
-                            </div>
-                            <span className="text-[10px] text-muted-foreground uppercase tracking-[0.3em] font-black mt-2">Legal Accuracy</span>
-                        </div>
+                                ) : item.hasShield ? (
+                                    <Shield className="text-orange-500 mb-4 group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]" size={40} />
+                                ) : (
+                                    <span className="text-6xl font-black text-white group-hover:text-orange-500 transition-colors tracking-tighter mb-2">{item.val}</span>
+                                )}
+                                <span className="text-[10px] text-muted-foreground uppercase tracking-[0.4em] font-black">{item.label}</span>
+                            </motion.div>
+                        ))}
                     </div>
                 </motion.div>
-            </div>
+            </motion.div>
         </section>
     );
 };
+
