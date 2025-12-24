@@ -7,73 +7,79 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const features = [
     {
-        title: "Profile Assessment",
-        description: "Initial evaluation of your extraordinary ability signals across 10 USCIS criteria to determine your baseline eligibility.",
-        icon: <BrainCircuit className="text-orange-500" size={24} />,
-        gradient: "from-orange-500/20 to-amber-500/20"
+        title: "Criteria Ingestion",
+        description: "Automated extraction of your professional footprint across 10 USCIS regulatory guidelines to establish your baseline Extraordinary Ability quotient.",
+        icon: <BrainCircuit className="text-orange-500" size={28} />,
+        gradient: "from-orange-600/20 to-transparent"
     },
     {
-        title: "Technical Strategy",
-        description: "Defining your critical roadmap, identifying evidence gaps, and formulating the core narrative of your petition.",
-        icon: <Cpu className="text-amber-500" size={24} />,
-        gradient: "from-amber-500/20 to-orange-500/20"
+        title: "Matter of Dhanasar Strategy",
+        description: "Deep engineering of your 'Proposed Endeavor' to meet the three-prong test: Substantial Merit, National Importance, and Case-Specific Urgency.",
+        icon: <Cpu className="text-orange-500" size={28} />,
+        gradient: "from-orange-600/20 to-transparent"
     },
     {
-        title: "Evidence Engineering",
-        description: "Building the strongest possible case with verified documentation, elite reference letters, and expert briefs.",
-        icon: <PenTool className="text-red-500" size={24} />,
-        gradient: "from-red-500/20 to-orange-500/20"
+        title: "Evidence Orchestration",
+        description: "High-fidelity documentation hardening, including Expert Opinion Letters from Tier-1 IEEE/ACM fellows and Fortune 500 executives.",
+        icon: <ShieldCheck className="text-orange-500" size={28} />,
+        gradient: "from-orange-600/20 to-transparent"
     },
     {
-        title: "Real-time Tracking",
-        description: "Monitor your case health, document collection progress, and attorney actions through a transparent dashboard.",
-        icon: <BarChart3 className="text-orange-500" size={24} />,
-        gradient: "from-orange-500/20 to-red-500/20"
+        title: "Final Merits Determination",
+        description: "Pre-filing 'Officer Mode' simulation to ensure your profile withstands the Kazarian two-part adjudicative standard with zero ambiguity.",
+        icon: <BarChart3 className="text-orange-500" size={28} />,
+        gradient: "from-orange-600/20 to-transparent"
     },
     {
-        title: "Expert Network",
-        description: "Connect with verified conference organizers, editors, and industry leaders to strengthen your authority profile.",
-        icon: <Users className="text-amber-500" size={24} />,
-        gradient: "from-amber-500/20 to-yellow-500/20"
+        title: "Expert Network Access",
+        description: "Direct connectivity with journal editors, conference chairs, and industry pioneers to generate authentic, high-impact signals of national acclaim.",
+        icon: <Users className="text-orange-500" size={28} />,
+        gradient: "from-orange-600/20 to-transparent"
     },
     {
-        title: "Legal Success Vault",
-        description: "Enterprise-grade security for your sensitive documents, shared securely with top U.S. immigration attorneys.",
-        icon: <ShieldCheck className="text-emerald-500" size={24} />,
-        gradient: "from-emerald-500/20 to-teal-500/20"
+        title: "Adjudication Intelligence",
+        description: "Transparent real-time tracking of USCIS processing velocities and RFE trends across specific service centers (Texas vs. Nebraska).",
+        icon: <Globe className="text-orange-500" size={28} />,
+        gradient: "from-orange-600/20 to-transparent"
     }
 ];
 
 export const Features = () => {
     return (
-        <section id="features" className="py-24 px-6 relative">
-            <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-black mb-4">Stages of <span className="text-orange-500">EB-1A Success</span></h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-medium">
-                        A systematic engineering approach to securing your U.S. extraordinary ability petition.
-                    </p>
+        <section id="features" className="py-32 px-6 relative bg-[#020617]">
+            <div className="max-w-7xl mx-auto">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div className="max-w-3xl">
+                        <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight leading-[1.1]">The <span className="text-orange-500">Engineering</span> Standard.</h2>
+                        <p className="text-muted-foreground text-xl font-black uppercase tracking-tight opacity-60">
+                            Immigration is no longer just a legal process; it's a data-driven strategy for global mobility.
+                        </p>
+                    </div>
+                    <div className="flex flex-col items-end gap-2 text-right">
+                        <div className="text-orange-500 font-black text-xs uppercase tracking-[0.4em]">USCIS 2025 COMPLIANT</div>
+                        <div className="h-0.5 w-32 bg-orange-500" />
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
+                            transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
                         >
-                            <Card className="glass-card hover:bg-white/5 transition-colors border-white/5 overflow-hidden group h-full">
-                                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                                <CardHeader className="relative z-10 pb-2">
-                                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <Card className="glass-card hover:border-orange-500/30 transition-all duration-500 border-white/5 overflow-hidden group h-full relative cursor-default">
+                                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`} />
+                                <CardHeader className="p-8 pb-4 relative z-10">
+                                    <div className="w-16 h-16 rounded-2xl bg-white/[0.03] flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-orange-600/10 transition-all duration-500 border border-white/5 group-hover:border-orange-500/30">
                                         {feature.icon}
                                     </div>
-                                    <CardTitle className="text-xl font-bold">{feature.title}</CardTitle>
+                                    <CardTitle className="text-2xl font-black text-white uppercase tracking-tight mb-2 group-hover:text-orange-500 transition-colors">{feature.title}</CardTitle>
                                 </CardHeader>
-                                <CardContent className="relative z-10">
-                                    <CardDescription className="text-muted-foreground leading-relaxed text-sm">
+                                <CardContent className="p-8 pt-0 relative z-10">
+                                    <CardDescription className="text-muted-foreground leading-relaxed text-sm font-medium">
                                         {feature.description}
                                     </CardDescription>
                                 </CardContent>
