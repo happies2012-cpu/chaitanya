@@ -102,14 +102,14 @@ export default function Home() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/5 rounded-full blur-[120px] -mr-48 -mt-48 transition-all group-hover:bg-indigo-600/10" />
 
           <div className="relative z-10 flex flex-col items-center">
-            <Badge className="bg-indigo-500/10 text-indigo-600 uppercase font-black text-[10px] tracking-[0.4em] mb-10 px-6 py-2 rounded-full border border-indigo-500/20">Final Phase Implementation</Badge>
+            <Badge className="bg-orange-500/10 text-orange-600 uppercase font-black text-[10px] tracking-[0.4em] mb-10 px-6 py-2 rounded-full border border-orange-500/20">Final Phase Implementation</Badge>
             <h2 className="text-4xl md:text-5xl font-outfit font-black mb-8 leading-[1.1] text-foreground uppercase tracking-tight">
               Impacted by <br /> <span className="text-gradient-primary">Expert Analysis</span>.
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl mb-14 max-w-2xl mx-auto font-inter font-medium leading-relaxed opacity-80">
               Don't leave your EB-1A journey to chance. Join the ecosystem where extraordinary talent meets precise technical engineering.
             </p>
-            <Button size="lg" className="h-16 px-12 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-lg font-outfit font-black shadow-xl shadow-indigo-500/20 group uppercase tracking-widest transition-all hover:scale-105 active:scale-95">
+            <Button size="lg" className="h-16 px-12 bg-orange-600 hover:bg-orange-700 text-white rounded-xl text-lg font-outfit font-black shadow-xl shadow-orange-500/20 group uppercase tracking-widest transition-all hover:scale-105 active:scale-95">
               Ready for Scan
               <ArrowRight className="ml-4 group-hover:translate-x-2 transition-transform" size={20} />
             </Button>
@@ -135,12 +135,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-start text-left">
           <div className="md:col-span-4 space-y-8">
             <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 rounded-xl overflow-hidden shadow-xl shadow-indigo-500/20">
-                <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
+              <div className="w-12 h-12 rounded-xl overflow-hidden shadow-xl shadow-orange-500/20">
+                <img src="/logo.svg" alt="Logo" className="w-full h-full object-cover p-1" />
               </div>
               <div className="flex flex-col -space-y-1">
-                <span className="text-foreground font-outfit font-black tracking-tighter uppercase text-2xl leading-none">Guide<span className="text-indigo-600">Soft</span></span>
-                <span className="text-[7px] text-muted-foreground font-bold uppercase tracking-[0.4em]">Intelligent Solutions</span>
+                <span className="text-foreground font-outfit font-black tracking-tighter uppercase text-2xl leading-none">Horizon<span className="text-orange-600">EB1</span></span>
+                <span className="text-[7px] text-muted-foreground font-bold uppercase tracking-[0.4em]">Tech Advisors</span>
               </div>
             </div>
             <p className="text-sm font-inter font-medium leading-relaxed opacity-60">
@@ -169,12 +169,12 @@ export default function Home() {
 
           <div className="md:col-span-4 space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground flex items-center gap-3">
-              <Shield size={12} className="text-indigo-500" /> Administrative Security
+              <Shield size={12} className="text-orange-500" /> Administrative Security
             </h4>
             <div className="p-6 rounded-2xl bg-muted/60 border border-muted-foreground/10 text-[10px] font-bold uppercase tracking-widest leading-loose opacity-60">
               All case data is encrypted using US Federal post-quantum standards. Advisory is technical in nature; we are not a law firm.
             </div>
-            <p className="text-[10px] tracking-widest font-black uppercase opacity-40">© 2025 GuideSoft Technologies.</p>
+            <p className="text-[10px] tracking-widest font-black uppercase opacity-40">© 2025 Horizon EB1 Tech Advisors.</p>
           </div>
         </div>
       </footer>

@@ -107,14 +107,14 @@ export default function LoginPage() {
                         className="mb-8"
                     >
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-600 to-purple-600 flex items-center justify-center">
                                 <Sparkles className="w-7 h-7 text-white" />
                             </div>
                             <h1 className="text-4xl font-bold text-white">
-                                Guide<span className="text-indigo-400">Soft</span>
+                                Horizon<span className="text-orange-500">EB1</span>
                             </h1>
                         </div>
-                        <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full" />
+                        <div className="h-1 w-24 bg-gradient-to-r from-orange-600 to-purple-600 rounded-full" />
                     </motion.div>
 
                     {/* Tagline */}
@@ -127,7 +127,7 @@ export default function LoginPage() {
                             Central Authentication
                         </h2>
                         <p className="text-lg text-slate-300 leading-relaxed mb-6">
-                            Secure, unified access to all your GuideSoft applications.
+                            Secure, unified access to all your Horizon EB1 applications.
                         </p>
                         <p className="text-slate-400">
                             One account. Infinite possibilities. Built for the future.
@@ -170,11 +170,11 @@ export default function LoginPage() {
                         className="lg:hidden text-center mb-8"
                     >
                         <div className="flex items-center justify-center gap-2 mb-4">
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600 to-purple-600 flex items-center justify-center">
                                 <Sparkles className="w-6 h-6 text-white" />
                             </div>
                             <h1 className="text-2xl font-bold text-white">
-                                Guide<span className="text-indigo-400">Soft</span>
+                                Horizon<span className="text-orange-500">EB1</span>
                             </h1>
                         </div>
                         <p className="text-sm text-slate-400">Central Authentication System</p>
@@ -304,7 +304,7 @@ export default function LoginPage() {
                                         onChange={(e) => setEmail(e.target.value)}
                                         onFocus={() => setFocusedInput(true)}
                                         onBlur={() => setFocusedInput(false)}
-                                        className="h-12 bg-white/5 border-white/10 text-white placeholder:text-slate-500 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all duration-300"
+                                        className="h-12 bg-white/5 border-white/10 text-white placeholder:text-slate-500 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all duration-300"
                                         required
                                         aria-label="Email address"
                                     />
@@ -317,7 +317,7 @@ export default function LoginPage() {
                             >
                                 <Button
                                     type="submit"
-                                    className="w-full h-12 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold group transition-all duration-300 shadow-lg shadow-indigo-500/25"
+                                    className="w-full h-12 bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white font-semibold group transition-all duration-300 shadow-lg shadow-orange-500/25"
                                     disabled={isLoading}
                                 >
                                     {isLoading ? (
@@ -342,14 +342,14 @@ export default function LoginPage() {
                             By continuing, I accept the{' '}
                             <Link
                                 href="/terms"
-                                className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors"
+                                className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors"
                             >
                                 Services Agreement
                             </Link>{' '}
                             and acknowledge the{' '}
                             <Link
                                 href="/privacy"
-                                className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors"
+                                className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors"
                             >
                                 Privacy Policy
                             </Link>
@@ -365,11 +365,11 @@ export default function LoginPage() {
                         className="text-center mt-6"
                     >
                         <p className="text-xs text-slate-500">
-                            © 2025 GuideSoft. All rights reserved.
+                            © 2025 Horizon EB1. All rights reserved.
                         </p>
                     </motion.div>
                 </motion.div>
             </div>
-        </main>
+        </main >
     );
 }

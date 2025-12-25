@@ -3,7 +3,7 @@
 // ============================================
 
 /**
- * GuideSoft Marketing Automation & AI Agents
+ * Horizon EB1 Tech Advisors Marketing Automation & AI Agents
  * 
  * Features:
  * - WhatsApp Business API Integration
@@ -278,15 +278,15 @@ export class AIAgent {
 
         // Simple rule-based responses (replace with actual AI)
         if (lastMessage.includes('price') || lastMessage.includes('cost')) {
-            return "Our pricing is flexible and depends on your specific needs. We offer packages starting from $3,000 for design services, $5,000 for web development, and $8,000 for mobile apps. Would you like to schedule a free consultation to discuss your project?";
+            return "Our advisory services are tailored to your specific case complexity. We offer comprehensive eligibility scans and strategic case hardening. Would you like to schedule an eligibility consultation?";
         }
 
         if (lastMessage.includes('service') || lastMessage.includes('what do you do')) {
-            return "GuideSoft specializes in web development, mobile apps, UI/UX design, cloud solutions, and digital marketing. We help businesses build modern, scalable applications. What type of project are you interested in?";
+            return "Horizon EB1 Tech Advisors specializes in strategic EB-1A advisory for tech professionals. We bridge the gap between innovation and national interest. What questions do you have about your eligibility?";
         }
 
         if (lastMessage.includes('contact') || lastMessage.includes('call')) {
-            return "I'd be happy to connect you with our team! You can reach us at hello@guidesoft.com or call us at +1 (555) 123-4567. Would you prefer a call or email?";
+            return "I'd be happy to connect you with our advisors! You can reach us at hello@horizoneb1.com or call us. Would you prefer a call or email?";
         }
 
         return "Thank you for your message! I'm here to help you with any questions about our services. Could you tell me more about what you're looking for?";
@@ -376,25 +376,25 @@ export class SEOManager {
     generateMetadata(page: string, data: Partial<SEOMetadata>): SEOMetadata {
         const defaults: Record<string, SEOMetadata> = {
             home: {
-                title: 'GuideSoft - Modern Web & Mobile Development',
-                description: 'Professional web development, mobile apps, and UI/UX design services. Build scalable applications with cutting-edge technologies.',
-                keywords: ['web development', 'mobile apps', 'UI/UX design', 'software development'],
+                title: 'Horizon EB1 Tech Advisors - Strategic US Tech Immigration',
+                description: 'Elite strategic advisory for tech professionals seeking US immigration. Horizon EB1 bridges the gap between innovation and national interest.',
+                keywords: ['EB1', 'Tech Advisors', 'Immigration', 'Green Card', 'O1 Visa'],
                 ogImage: '/og-image.png',
-                canonical: 'https://guidesoft.com',
+                canonical: 'https://horizoneb1.com',
             },
             services: {
-                title: 'Our Services - GuideSoft',
-                description: 'Comprehensive development services including web applications, mobile apps, cloud solutions, and digital marketing.',
-                keywords: ['development services', 'web apps', 'mobile development', 'cloud services'],
+                title: 'Our Services - Horizon EB1',
+                description: 'Comprehensive EB-1A and O-1 advisory services including case strategy, technical hardening, and adjudicator sentiment analysis.',
+                keywords: ['immigration services', 'EB1 advisory', 'O1 visa', 'tech immigration'],
                 ogImage: '/og-services.png',
-                canonical: 'https://guidesoft.com/services',
+                canonical: 'https://horizoneb1.com/services',
             },
             contact: {
-                title: 'Contact Us - GuideSoft',
-                description: 'Get in touch with our team for a free consultation. We\'re here to help bring your ideas to life.',
-                keywords: ['contact', 'consultation', 'get quote'],
+                title: 'Contact Us - Horizon EB1',
+                description: 'Get in touch with our team for a free eligibility consultation. We\'re here to help you navigate your immigration journey.',
+                keywords: ['contact', 'consultation', 'eligibility scan'],
                 ogImage: '/og-contact.png',
-                canonical: 'https://guidesoft.com/contact',
+                canonical: 'https://horizoneb1.com/contact',
             },
         };
 
@@ -409,10 +409,10 @@ export class SEOManager {
             organization: {
                 '@context': 'https://schema.org',
                 '@type': 'Organization',
-                name: 'GuideSoft',
-                url: 'https://guidesoft.com',
-                logo: 'https://guidesoft.com/logo.png',
-                description: 'Professional software development company',
+                name: 'Horizon EB1 Tech Advisors',
+                url: 'https://horizoneb1.com',
+                logo: 'https://horizoneb1.com/logo.png',
+                description: 'Strategic US Tech Immigration Advisory',
                 contactPoint: {
                     '@type': 'ContactPoint',
                     telephone: '+1-555-123-4567',
@@ -425,7 +425,7 @@ export class SEOManager {
                 serviceType: data.serviceType || 'Software Development',
                 provider: {
                     '@type': 'Organization',
-                    name: 'GuideSoft',
+                    name: 'Horizon EB1 Tech Advisors',
                 },
                 areaServed: 'Worldwide',
                 hasOfferCatalog: {
@@ -442,7 +442,7 @@ export class SEOManager {
                 image: data.image,
                 author: {
                     '@type': 'Organization',
-                    name: 'GuideSoft'
+                    name: 'Horizon EB1 Tech Advisors'
                 },
                 datePublished: data.datePublished
             }

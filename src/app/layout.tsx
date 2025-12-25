@@ -16,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "GuideSoft | Professional Web & Mobile Development",
-  description: "Elite strategic advisory and development for modern businesses. GuideSoft bridges the gap between innovation and execution.",
-  keywords: ["Software Development", "Web Development", "Mobile Apps", "GuideSoft", "AI Agents"],
+  title: "Horizon EB1 Tech Advisors | Strategic US Tech Immigration",
+  description: "Elite strategic advisory for tech professionals seeking US immigration. Horizon EB1 bridges the gap between innovation and national interest.",
+  keywords: ["EB1", "Tech Advisors", "Immigration", "Horizon EB1", "Green Card", "O1 Visa"],
 };
 
 import { PremiumBackground } from "@/components/ui/PremiumBackground";

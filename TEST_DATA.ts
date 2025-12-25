@@ -10,7 +10,7 @@ export const testUsers = {
     // Admin User
     admin: {
         id: 'user_001',
-        email: 'admin@guidesoft.com',
+        email: 'admin@horizoneb1.com',
         password: 'Admin@123',
         name: 'Sarah Johnson',
         role: 'admin',
@@ -34,7 +34,7 @@ export const testUsers = {
     // Developer User
     developer: {
         id: 'user_003',
-        email: 'dev@guidesoft.com',
+        email: 'dev@horizoneb1.com',
         password: 'Dev@123',
         name: 'Alex Chen',
         role: 'developer',
@@ -46,7 +46,7 @@ export const testUsers = {
     // Manager User
     manager: {
         id: 'user_004',
-        email: 'manager@guidesoft.com',
+        email: 'manager@horizoneb1.com',
         password: 'Manager@123',
         name: 'Emily Rodriguez',
         role: 'manager',
