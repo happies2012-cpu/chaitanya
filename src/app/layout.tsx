@@ -16,13 +16,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "horizoneb1techadvisors | Elite EB-1A Technical Advisory",
-  description: "Elite strategic advisory for EB-1A extraordinary talent. Engineering global mobility for technical pioneers. horizoneb1techadvisors bridges the gap between innovation and adjudication.",
-  keywords: ["EB-1A Visa", "Extraordinary Ability", "US Green Card", "horizoneb1techadvisors", "Immigration Engineering"],
+  title: "GuideSoft | Professional Web & Mobile Development",
+  description: "Elite strategic advisory and development for modern businesses. GuideSoft bridges the gap between innovation and execution.",
+  keywords: ["Software Development", "Web Development", "Mobile Apps", "GuideSoft", "AI Agents"],
 };
 
 import { PremiumBackground } from "@/components/ui/PremiumBackground";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+
+import { WhatsAppWidget } from "@/components/marketing/WhatsAppWidget";
 
 export default function RootLayout({
   children,
@@ -40,6 +42,7 @@ export default function RootLayout({
         >
           <PremiumBackground />
           {children}
+          <WhatsAppWidget />
           <Toaster position="top-right" />
         </ThemeProvider>
       </body>
