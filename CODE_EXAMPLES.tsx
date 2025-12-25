@@ -2,6 +2,7 @@
 // COMPLETE CODE SNIPPET - READY TO USE
 // ============================================
 
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap, Code, Smartphone, Palette } from 'lucide-react';
@@ -108,8 +109,8 @@ export function FeatureCardsExample() {
 // ============================================
 
 export function CenteredFormExample() {
-    const [email, setEmail] = React.useState('');
-    const [focused, setFocused] = React.useState(false);
+    const [email, setEmail] = useState('');
+    const [focused, setFocused] = useState(false);
 
     return (
         <div className="min-h-screen flex items-center justify-center p-6 bg-background">
