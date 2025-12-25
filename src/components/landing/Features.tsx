@@ -56,8 +56,8 @@ export const Features = () => {
                         transition={{ duration: 0.8 }}
                         className="max-w-3xl"
                     >
-                        <h2 className="text-5xl md:text-[5.5rem] font-black mb-8 uppercase tracking-tighter leading-[0.85]">The <span className="text-orange-500">Engineering</span> <br /> Standard.</h2>
-                        <p className="text-muted-foreground text-xl font-black uppercase tracking-tight opacity-60">
+                        <h2 className="text-3xl md:text-5xl font-outfit font-black mb-8 uppercase tracking-tight leading-[1.1] text-foreground">The <span className="text-gradient-orange">Engineering</span> <br /> Standard.</h2>
+                        <p className="text-muted-foreground text-lg font-inter font-medium tracking-tight max-w-2xl opacity-80">
                             Immigration is no longer just a legal process; it's a data-driven strategy for global mobility.
                         </p>
                     </motion.div>
@@ -84,7 +84,7 @@ export const Features = () => {
                             transition={{ duration: 0.8, delay: index * 0.1, ease: [0.215, 0.61, 0.355, 1] }}
                             whileHover={{ y: -10, transition: { duration: 0.3 } }}
                         >
-                            <Card className="glass-card hover:border-orange-500/50 transition-all duration-500 border-white/5 overflow-hidden group h-full relative cursor-pointer bg-white/[0.01] hover:bg-white/[0.03] shadow-2xl">
+                            <Card className="glass-card hover:border-orange-500/50 transition-all duration-500 border-muted-foreground/10 overflow-hidden group h-full relative cursor-pointer bg-muted/5 hover:bg-muted/10 shadow-2xl">
                                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-700`} />
 
                                 <div className="absolute top-0 right-0 w-12 h-12 bg-orange-500/10 rounded-bl-3xl transform translate-x-6 -translate-y-6 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 border-l border-b border-orange-500/20" />
@@ -93,12 +93,12 @@ export const Features = () => {
                                     <div className="w-18 h-18 rounded-[2rem] bg-orange-500/5 flex items-center justify-center mb-10 group-hover:bg-orange-600/20 transition-all duration-500 border border-orange-500/10 group-hover:rotate-[15deg] group-hover:shadow-[0_0_30px_rgba(249,115,22,0.3)]">
                                         {feature.icon}
                                     </div>
-                                    <CardTitle className="text-3xl font-black text-white uppercase tracking-tighter mb-4 group-hover:text-orange-500 transition-colors leading-none">
+                                    <CardTitle className="text-2xl font-outfit font-black text-foreground uppercase tracking-tight mb-4 group-hover:text-orange-500 transition-colors leading-tight">
                                         {feature.title}
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-10 pt-0 relative z-10">
-                                    <CardDescription className="text-muted-foreground leading-relaxed text-sm font-black uppercase tracking-tight opacity-70 group-hover:opacity-100 transition-opacity">
+                                    <CardDescription className="text-muted-foreground leading-relaxed text-sm font-inter font-medium tracking-tight opacity-70 group-hover:opacity-100 transition-opacity">
                                         {feature.description}
                                     </CardDescription>
                                 </CardContent>

@@ -59,7 +59,9 @@ export default function AuthoritiesPage() {
                             <Badge className="bg-orange-500/20 text-orange-400 border-none text-[10px] font-black tracking-widest uppercase">Expert Intelligence</Badge>
                             <Badge className="bg-amber-400/10 text-amber-500 border-none text-[10px] font-black tracking-widest uppercase">Reputation First</Badge>
                         </div>
-                        <h1 className="text-4xl font-black text-white uppercase tracking-tight">Expert <span className="text-orange-500">Network</span></h1>
+                        <h1 className="text-[28px] font-outfit font-black text-foreground uppercase tracking-tight leading-none mb-2">
+                            Expert <span className="text-orange-500">Network</span>
+                        </h1>
                         <p className="text-muted-foreground max-w-xl font-medium">Connect with journals, editors, and peer reviewers to build authentic, high-impact signals for your EB-1A petition.</p>
                     </div>
                     <div className="flex gap-4 w-full md:w-auto">
@@ -94,7 +96,7 @@ export default function AuthoritiesPage() {
                                         <div className="flex-grow space-y-4">
                                             <div className="flex justify-between items-start">
                                                 <div>
-                                                    <h3 className="text-2xl font-black text-white group-hover:text-orange-500 transition-colors uppercase tracking-tight">{expert.name}</h3>
+                                                    <h2 className="text-xl font-outfit font-black text-foreground group-hover:text-orange-500 transition-colors uppercase tracking-tight">{expert.name}</h2>
                                                     <p className="text-muted-foreground font-medium">{expert.title}</p>
                                                 </div>
                                                 <Badge variant="outline" className="bg-white/5 border-white/5 text-[10px] font-black uppercase tracking-widest px-3 py-1">
@@ -143,11 +145,11 @@ export default function AuthoritiesPage() {
                     <div className="lg:col-span-4 space-y-8">
                         <Card className="glass-card border-white/10 bg-gradient-to-br from-indigo-500/10 to-transparent p-6">
                             <CardHeader className="p-0 mb-6">
-                                <CardTitle className="text-xl font-black flex items-center gap-2 uppercase tracking-tight">
+                                <h2 className="text-[20px] font-outfit font-black flex items-center gap-2 uppercase tracking-tight text-white">
                                     <Star className="text-orange-500" size={20} />
                                     Reputation Guard
-                                </CardTitle>
-                                <CardDescription className="text-xs font-medium text-muted-foreground uppercase tracking-wide">The Horizon Eb1 Network strictly enforces ethical matching.</CardDescription>
+                                </h2>
+                                <CardDescription className="text-xs font-medium text-muted-foreground uppercase tracking-wide">The horizoneb1techadvisors Network strictly enforces ethical matching.</CardDescription>
                             </CardHeader>
                             <CardContent className="p-0 space-y-6">
                                 <div className="space-y-4">

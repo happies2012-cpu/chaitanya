@@ -17,10 +17,10 @@ export const Hero = () => {
         <section className="relative pt-64 pb-32 px-6 overflow-hidden min-h-screen flex flex-col justify-center bg-transparent">
             {/* Professional Background Imagery - Using the generated luxury banner */}
             <motion.div style={{ y: bgY }} className="absolute inset-0 z-0 scale-110">
-                <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-transparent to-[#020617] z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background z-10" />
                 <img
                     src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-                    className="w-full h-full object-cover opacity-30 brightness-[0.7]"
+                    className="w-full h-full object-cover opacity-20 dark:opacity-30 brightness-[1.1] dark:brightness-[0.7]"
                     alt="Modern skyscraper architecture"
                 />
             </motion.div>
@@ -33,47 +33,46 @@ export const Hero = () => {
                     initial={{ opacity: 0, scale: 0.9, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl bg-orange-600/10 border border-orange-500/20 text-orange-400 text-[10px] font-black uppercase tracking-[0.4em] mb-12 shadow-[0_0_30px_rgba(249,115,22,0.1)] backdrop-blur-xl"
+                    className="inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl bg-orange-600/10 border border-orange-500/20 text-orange-600 dark:text-orange-400 text-[10px] font-black uppercase tracking-[0.4em] mb-12 shadow-[0_0_30px_rgba(249,115,22,0.1)] backdrop-blur-xl"
                 >
                     <div className="w-2.5 h-2.5 rounded-full bg-orange-500 animate-pulse shadow-[0_0_10px_rgba(249,115,22,0.8)]" />
                     75+ Technical Advisory Successes in the US
                 </motion.div>
 
                 <motion.h1
-                    initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+                    initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                    transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                    className="text-6xl md:text-[11rem] font-black tracking-tighter mb-10 leading-[0.8] text-white uppercase"
+                    transition={{ duration: 0.8, ease: [0.215, 0.61, 0.355, 1] }}
+                    className="text-5xl md:text-7xl font-outfit font-black tracking-[-0.04em] mb-10 leading-[0.9] text-foreground uppercase pt-4"
                 >
-                    Engineering <br /> <span className="text-orange-500 drop-shadow-[0_0_50px_rgba(249,115,22,0.3)]">Extraordinary</span> <br /> Careers.
+                    Elite <br /> <span className="text-gradient-orange">Talent</span> <br /> Advisory.
                 </motion.h1>
 
                 <motion.p
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                    className="text-xl md:text-2xl text-muted-foreground/80 max-w-4xl mx-auto mb-20 leading-relaxed font-black uppercase tracking-tight"
+                    transition={{ duration: 0.8, delay: 0.2, ease: [0.215, 0.61, 0.355, 1] }}
+                    className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-16 leading-relaxed font-inter font-medium tracking-tight opacity-80"
                 >
-                    Strategic Technical Advisory for the EB-1A Merit Path. <br className="hidden md:block" />
-                    Crafted for pioneers who define the next frontier of global innovation.
+                    Engineering Extraordinary EB-1A Petitions for Global Pioneers. <br className="hidden md:block" />
+                    Where Data Science meets Immigration Intelligence.
                 </motion.p>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-                    className="flex flex-col md:flex-row items-center justify-center gap-8"
+                    transition={{ duration: 0.8, delay: 0.4, ease: [0.215, 0.61, 0.355, 1] }}
+                    className="flex flex-col md:flex-row items-center justify-center gap-6"
                 >
                     <Link href="/eligibility">
-                        <Button size="lg" className="h-20 px-14 bg-orange-600 hover:bg-orange-700 text-white rounded-[1.5rem] text-xl font-black shadow-[0_20px_40px_-10px_rgba(249,115,22,0.4)] group uppercase tracking-[0.2em] border-none transition-all hover:scale-105 active:scale-95">
-                            Check My Eligibility
-                            <ArrowRight className="ml-5 group-hover:translate-x-3 transition-transform" strokeWidth={3} />
+                        <Button size="lg" className="h-16 px-12 bg-orange-600 hover:bg-orange-700 text-white rounded-xl text-sm font-black shadow-lg shadow-orange-500/20 group uppercase tracking-widest border-none transition-all hover:scale-105 active:scale-95">
+                            Start Profile Scan
+                            <ArrowRight className="ml-4 group-hover:translate-x-2 transition-transform" strokeWidth={3} size={20} />
                         </Button>
                     </Link>
                     <Link href="/about">
-                        <Button size="lg" variant="outline" className="h-20 px-14 border-white/10 hover:bg-white/5 text-xl font-black rounded-[1.5rem] backdrop-blur-md text-white uppercase tracking-[0.2em] transition-all hover:border-orange-500/50 group/btn">
+                        <Button size="lg" variant="outline" className="h-16 px-12 border-muted-foreground/20 hover:bg-orange-500/5 text-sm font-black rounded-xl backdrop-blur-md text-foreground uppercase tracking-widest transition-all hover:border-orange-500/50 group/btn">
                             Success Network
-                            <Globe className="ml-5 text-orange-500 group-hover/btn:rotate-[30deg] transition-transform" size={28} />
                         </Button>
                     </Link>
                 </motion.div>
@@ -83,7 +82,7 @@ export const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 1 }}
-                    className="mt-40 pt-20 border-t border-white/10"
+                    className="mt-40 pt-20 border-t border-muted-foreground/10"
                 >
                     <div className="flex flex-wrap justify-center items-start gap-16 md:gap-32">
                         {[
@@ -103,7 +102,7 @@ export const Hero = () => {
                                             <motion.div
                                                 key={p}
                                                 whileHover={{ scale: 1.2, zIndex: 10, y: -5 }}
-                                                className="w-12 h-12 rounded-2xl border-2 border-[#020617] bg-[#1a1a1a] overflow-hidden shadow-2xl relative"
+                                                className="w-12 h-12 rounded-2xl border-2 border-background bg-muted overflow-hidden shadow-2xl relative"
                                             >
                                                 <img src={`https://i.pravatar.cc/150?img=${p + 20}`} alt="Success" className="w-full h-full object-cover" />
                                             </motion.div>
@@ -112,7 +111,7 @@ export const Hero = () => {
                                 ) : item.hasShield ? (
                                     <Shield className="text-orange-500 mb-4 group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]" size={40} />
                                 ) : (
-                                    <span className="text-6xl font-black text-white group-hover:text-orange-500 transition-colors tracking-tighter mb-2">{item.val}</span>
+                                    <span className="text-6xl font-black text-foreground group-hover:text-orange-500 transition-colors tracking-tighter mb-2">{item.val}</span>
                                 )}
                                 <span className="text-[10px] text-muted-foreground uppercase tracking-[0.4em] font-black">{item.label}</span>
                             </motion.div>

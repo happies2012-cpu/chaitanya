@@ -62,16 +62,16 @@ export default function LoginPage() {
                 className="w-full max-w-md relative z-10"
             >
                 <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-600 to-amber-500 shadow-2xl shadow-orange-500/20 mb-4">
-                        <span className="text-white font-black text-3xl">H</span>
+                    <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-2xl shadow-orange-500/20 mb-6 mx-auto">
+                        <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
                     </div>
-                    <h1 className="text-3xl font-black text-white tracking-tight uppercase">HORIZON<span className="text-orange-500">EB-1</span></h1>
-                    <p className="text-muted-foreground font-bold uppercase tracking-[0.2em] text-[10px]">Tech Advisors | Secure Auth</p>
+                    <h1 className="text-[28px] font-outfit font-black text-foreground uppercase tracking-tight leading-none mb-2">HORIZON<span className="text-orange-500">EB-1</span></h1>
+                    <p className="text-muted-foreground font-bold uppercase tracking-[0.2em] text-[10px] opacity-60">horizoneb1techadvisors | Secure Auth</p>
                 </div>
 
                 <Card className="glass-card border-white/10 shadow-3xl">
                     <CardHeader>
-                        <CardTitle className="text-2xl font-bold">Secure Access</CardTitle>
+                        <h2 className="text-[24px] font-outfit font-black text-foreground uppercase tracking-tight leading-none">Secure Access</h2>
                         <CardDescription>Enter your institutional credentials to continue</CardDescription>
                     </CardHeader>
                     <form onSubmit={handleSubmit(onSubmit)}>

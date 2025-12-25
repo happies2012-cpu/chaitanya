@@ -46,7 +46,9 @@ export default function MarketingPage() {
                                 Live Network Analysis
                             </div>
                         </div>
-                        <h1 className="text-4xl font-black text-white uppercase tracking-tight">Authority <span className="text-orange-500">Amplifier</span></h1>
+                        <h1 className="text-[28px] font-outfit font-black text-foreground uppercase tracking-tight leading-none mb-2">
+                            Authority <span className="text-orange-500">Amplifier</span>
+                        </h1>
                         <p className="text-muted-foreground max-w-xl font-medium">Automate your professional narrative. We use AI to identify, draft, and schedule high-impact signals that USCIS officers value in extraordinary ability petitions.</p>
                     </div>
                     <div className="flex gap-4">
@@ -83,10 +85,10 @@ export default function MarketingPage() {
 
                                 <TabsContent value="linkedin" className="p-8 space-y-6">
                                     <div className="space-y-4">
-                                        <h3 className="text-lg font-black flex items-center gap-2 uppercase tracking-tight text-white">
+                                        <h2 className="text-[20px] font-outfit font-black flex items-center gap-2 uppercase tracking-tight text-white mb-4">
                                             <Sparkles className="text-orange-500" size={18} />
                                             AI Thought Leadership Suggestion
-                                        </h3>
+                                        </h2>
                                         <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5 space-y-4">
                                             <div className="flex justify-between items-start">
                                                 <div className="flex gap-3">
@@ -134,10 +136,10 @@ export default function MarketingPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <Card className="glass-card border-white/10 p-6">
                                 <CardHeader className="p-0 mb-4">
-                                    <CardTitle className="text-xl font-black flex items-center gap-2 uppercase tracking-tight text-white">
+                                    <h2 className="text-[20px] font-outfit font-black flex items-center gap-2 uppercase tracking-tight text-white">
                                         <TrendingUp className="text-orange-500" size={20} />
                                         Impact Analytics
-                                    </CardTitle>
+                                    </h2>
                                 </CardHeader>
                                 <CardContent className="p-0 space-y-6">
                                     <div className="space-y-4">
@@ -159,10 +161,10 @@ export default function MarketingPage() {
 
                             <Card className="glass-card border-white/10 p-6">
                                 <CardHeader className="p-0 mb-4">
-                                    <CardTitle className="text-xl font-black flex items-center gap-2">
+                                    <h2 className="text-[20px] font-outfit font-black flex items-center gap-2 uppercase tracking-tight text-white">
                                         <Share2 className="text-emerald-400" size={20} />
                                         Social Connectivity
-                                    </CardTitle>
+                                    </h2>
                                 </CardHeader>
                                 <CardContent className="p-0 space-y-4">
                                     <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5">
@@ -194,8 +196,8 @@ export default function MarketingPage() {
                                 <div className="w-12 h-12 rounded-2xl bg-orange-600 flex items-center justify-center mb-4 shadow-xl shadow-orange-500/30">
                                     <Zap className="text-white fill-white" size={24} />
                                 </div>
-                                <CardTitle className="text-2xl font-black uppercase tracking-tight text-white">Advisory <span className="text-orange-500">Auto-Pilot</span></CardTitle>
-                                <CardDescription className="text-white/60 font-medium leading-relaxed">Let Horizon Eb1 build your extraordinary authority while you focus on your core work.</CardDescription>
+                                <h1 className="text-[24px] font-outfit font-black uppercase tracking-tight text-foreground">Advisory <span className="text-orange-500">Auto-Pilot</span></h1>
+                                <p className="text-muted-foreground font-medium leading-relaxed opacity-60">Let horizoneb1techadvisors build your extraordinary authority while you focus on your core work.</p>
                             </CardHeader>
                             <CardContent className="p-0 space-y-6">
                                 <div className="space-y-4">

@@ -46,7 +46,9 @@ export default function AdminPage() {
                                 System Normative
                             </div>
                         </div>
-                        <h1 className="text-4xl font-black text-white">Case <span className="text-gradient">Control Center</span></h1>
+                        <h1 className="text-[28px] font-outfit font-black text-foreground uppercase tracking-tight leading-none mb-2">
+                            Case <span className="text-gradient-orange">Control Center</span>
+                        </h1>
                         <p className="text-muted-foreground font-medium">Global oversight of talent recognition engineering pipelines.</p>
                     </div>
                     <div className="flex gap-4">
@@ -84,7 +86,7 @@ export default function AdminPage() {
                     <div className="lg:col-span-8">
                         <Card className="glass-card border-white/10 overflow-hidden">
                             <div className="p-6 border-b border-white/5 flex items-center justify-between">
-                                <h3 className="text-xl font-black text-white">High Impact Pipeline</h3>
+                                <h2 className="text-[20px] font-outfit font-black text-foreground uppercase tracking-tight">High Impact Pipeline</h2>
                                 <div className="relative w-64">
                                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={14} />
                                     <Input className="bg-white/5 border-white/5 pl-10 h-10 rounded-lg text-xs" placeholder="Search talents..." />
@@ -164,7 +166,7 @@ export default function AdminPage() {
                                     </div>
                                     <Badge className="bg-rose-500 text-white font-black px-2 py-0.5 animate-pulse">Critical Priority</Badge>
                                 </div>
-                                <CardTitle className="text-xl font-black">AI Risk Alert</CardTitle>
+                                <h2 className="text-[20px] font-outfit font-black text-foreground uppercase tracking-tight">AI Risk Alert</h2>
                                 <CardDescription className="text-xs font-medium text-muted-foreground">Potential RFE detected in Section 4.A for client <b>Elena Volkov</b>.</CardDescription>
                             </CardHeader>
                             <CardContent className="p-0 space-y-4">
