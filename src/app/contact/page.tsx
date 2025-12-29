@@ -8,12 +8,15 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 
+import { Navbar } from '@/components/landing/Navbar';
+import { Footer } from '@/components/layout/Footer';
+
 const contactInfo = [
     {
         icon: Mail,
         title: 'Email',
-        value: 'hello@example.com',
-        link: 'mailto:hello@example.com',
+        value: 'hello@horizoneb1.com',
+        link: 'mailto:hello@horizoneb1.com',
     },
     {
         icon: Phone,
@@ -24,7 +27,7 @@ const contactInfo = [
     {
         icon: MapPin,
         title: 'Office',
-        value: '123 Business St, Suite 100, City, State 12345',
+        value: 'San Francisco, CA',
         link: '#',
     },
 ];
@@ -67,6 +70,7 @@ export default function ContactPage() {
 
     return (
         <main className="min-h-screen bg-background">
+            <Navbar />
             {/* Hero Section */}
             <section className="section-padding bg-gradient-mesh relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]" />
@@ -261,6 +265,7 @@ export default function ContactPage() {
                     </motion.div>
                 </div>
             </section>
+            <Footer />
         </main>
     );
 }

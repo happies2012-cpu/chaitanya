@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { Users, Target, Award, TrendingUp, Heart, Globe } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Navbar } from '@/components/landing/Navbar';
+import { Footer } from '@/components/layout/Footer';
 
 const stats = [
     { label: 'Years Experience', value: '10+' },
@@ -39,6 +41,7 @@ const values = [
 export default function AboutPage() {
     return (
         <main className="min-h-screen bg-background">
+            <Navbar />
             {/* Hero Section */}
             <section className="section-padding bg-gradient-mesh relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
@@ -184,6 +187,7 @@ export default function AboutPage() {
                     </motion.div>
                 </div>
             </section>
+            <Footer />
         </main>
     );
 }

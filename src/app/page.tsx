@@ -4,6 +4,7 @@ import { Features } from "@/components/landing/Features";
 import { Pricing } from "@/components/landing/Pricing";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Box, CheckCircle2, Shield, Zap } from "lucide-react";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -131,53 +132,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-20 px-6 border-t border-muted/20 text-center text-muted-foreground transition-colors duration-500">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-start text-left">
-          <div className="md:col-span-4 space-y-8">
-            <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 rounded-xl overflow-hidden shadow-xl shadow-orange-500/20">
-                <img src="/logo.svg" alt="Logo" className="w-full h-full object-cover p-1" />
-              </div>
-              <div className="flex flex-col -space-y-1">
-                <span className="text-foreground font-outfit font-black tracking-tighter uppercase text-2xl leading-none">Horizon<span className="text-orange-600">EB1</span></span>
-                <span className="text-[7px] text-muted-foreground font-bold uppercase tracking-[0.4em]">Tech Advisors</span>
-              </div>
-            </div>
-            <p className="text-sm font-inter font-medium leading-relaxed opacity-60">
-              We bridge the gap between extraordinary technical innovation and complex adjudicative standards through elite data engineering and strategic legal architecture.
-            </p>
-          </div>
-
-          <div className="md:col-span-2 space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground">Intelligence</h4>
-            <div className="flex flex-col gap-4 text-xs font-bold uppercase tracking-widest opacity-60">
-              <a href="#" className="hover:text-indigo-500 transition-colors">Case Vault</a>
-              <a href="#" className="hover:text-indigo-500 transition-colors">Velocity Index</a>
-              <a href="#" className="hover:text-indigo-500 transition-colors">Strategic Map</a>
-              <a href="#" className="hover:text-indigo-500 transition-colors">Criteria Scan</a>
-            </div>
-          </div>
-
-          <div className="md:col-span-2 space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground">Infrastructure</h4>
-            <div className="flex flex-col gap-4 text-xs font-bold uppercase tracking-widest opacity-60">
-              <a href="#" className="hover:text-indigo-500 transition-colors">Advisory API</a>
-              <a href="#" className="hover:text-indigo-500 transition-colors">Privacy Node</a>
-              <a href="#" className="hover:text-indigo-500 transition-colors">Audit Protocol</a>
-            </div>
-          </div>
-
-          <div className="md:col-span-4 space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground flex items-center gap-3">
-              <Shield size={12} className="text-orange-500" /> Administrative Security
-            </h4>
-            <div className="p-6 rounded-2xl bg-muted/60 border border-muted-foreground/10 text-[10px] font-bold uppercase tracking-widest leading-loose opacity-60">
-              All case data is encrypted using US Federal post-quantum standards. Advisory is technical in nature; we are not a law firm.
-            </div>
-            <p className="text-[10px] tracking-widest font-black uppercase opacity-40">© 2025 Horizon EB1 Tech Advisors.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

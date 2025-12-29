@@ -14,6 +14,8 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Navbar } from '@/components/landing/Navbar';
+import { Footer } from '@/components/layout/Footer';
 
 const services = [
     {
@@ -63,6 +65,7 @@ const services = [
 export default function ServicesPage() {
     return (
         <main className="min-h-screen bg-background">
+            <Navbar />
             {/* Hero Section */}
             <section className="section-padding bg-gradient-mesh relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
@@ -199,6 +202,7 @@ export default function ServicesPage() {
                     </motion.div>
                 </div>
             </section>
+            <Footer />
         </main>
     );
 }
